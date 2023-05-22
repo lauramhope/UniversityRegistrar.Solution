@@ -1,0 +1,11 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Welcome to the University Registar!</h1>
+<h2>Home Page</h2>
+
+<p>@Html.ActionLink("See all students", "Index", "Students")</p> 
+<p>@Html.ActionLink("See all courses", "Index", "Courses")</p>
+<p>@Html.ActionLink("Add new course", "Create", "Courses")</p>
+<p>@Html.ActionLink("Add new student", "Create", "Students")</p>
