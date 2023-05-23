@@ -8,10 +8,10 @@
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.CourseName)
-  @Html.TextBoxFor(model => model.CourseName)
+  @Html.TextBoxFor(model => model.CourseName, new { required = "required" })
   <br />
   @Html.LabelFor(model => model.CourseNumber)
-  @Html.TextBoxFor(model => model.CourseNumber)
+  @Html.TextBoxFor(model => model.CourseNumber, new { required = "required" })
   <br />
   <input type="submit" value="Add new course" />
 }
