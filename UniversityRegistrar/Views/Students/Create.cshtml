@@ -6,8 +6,8 @@
 
 <h4>Add a new student</h4>
 
-<p><strong>NOTE:</strong> You need to have at least one course before you can add a student!</p>
-<p>Go to @Html.ActionLink("this page", "Create", "Courses") to create a course.</p>
+<p>@Html.ValidationMessageFor(model => model.StudentName, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
+<p>@Html.ValidationMessageFor(model => model.CourseId, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
 
 @using (Html.BeginForm())
 {
@@ -16,6 +16,10 @@
 
   @Html.LabelFor(model => model.EnrollmentDate)
   @Html.TextBoxFor(model => model.EnrollmentDate)
+
+  @Html.LabelFor(model => model.CourseId)
+  @Html.DropDownList("CategoryId")
+  <!-- @Html.DropDownListFor(model => model.CourseId, ViewBag.CourseId as SelectList, "Select a course") -->
 
   <input type="submit" value="Add new student" class="btn btn-primary" />
 }
