@@ -7,7 +7,8 @@
 
 <h2>Student Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.StudentName): @Html.DisplayFor(model => model.StudentName)</h3>  
+<h3>Name: @Html.DisplayFor(model => model.StudentName)</h3>
+<h4>Enrollment Date: @Html.DisplayFor(model => model.EnrollmentDate)</h4>    
 <h3>@Html.DisplayNameFor(model => model.Course): @Html.DisplayFor(model => model.Course.CourseName)</h3>
 
 @if(@Model.JoinEntities.Count == 0)

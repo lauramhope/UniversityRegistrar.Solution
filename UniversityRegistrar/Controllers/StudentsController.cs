@@ -80,5 +80,20 @@ namespace UniversityRegistrar.Controllers
       _db.SaveChanges();
       return RedirectToAction("Details", new { id = student.StudentId});
     }
+
+    public ActionResult Delete(int id)
+    {
+      Student thisStudent = _db.Students.FirstOrDefault(student => student.StudentId == id);
+      return View(thisStudent);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public ActionResult DeleteConfirmed(int id)
+    {
+      Student thisStudent = _db.Students.FirstOrDefault(student => student.StudentId == id);
+      _db.Students.Remove(thisStudent);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
