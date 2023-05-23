@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace UniversityRegistrar.Controllers
 {
-     public class StudentsController : Controller
+  public class StudentsController : Controller
   {
     private readonly UniversityRegistrarContext _db;
 
